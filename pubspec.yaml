@@ -40,6 +40,7 @@ dependencies:
   camera: ^0.12.2
   camera_macos: ^0.1.1
   device_info_plus: ^13.3.0
+  camera_windows: ^0.3.1
 
 dev_dependencies:
   flutter_test:

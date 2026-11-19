@@ -86,9 +86,10 @@ class _CameraCaptureViewState extends State<CameraCaptureView> {
             ? 'Camera permission denied. Please allow camera access in settings.'
             : 'Could not open the camera (${e.code}).';
       });
-    } catch (_) {
+    } catch (e, st) {
+      debugPrint('Camera init error: $e\n$st');
       if (!mounted) return;
-      setState(() => _error = 'Could not open the camera.');
+      setState(() => _error = 'Could not open the camera.\n$e');
     }
   }
 
